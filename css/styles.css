@@ -452,12 +452,14 @@ input[type=range]:focus-visible::-webkit-slider-thumb{outline:2px solid var(--ve
 
 /* ---------- referidos y cierre ---------- */
 .ref-cards{display:grid;grid-template-columns:1fr;gap:20px}
-@media (min-width:820px){.ref-cards{grid-template-columns:1fr 1fr;gap:28px}}
+@media (min-width:820px){.ref-cards{grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:28px}}
 .ref{background:var(--crema-2);border:1px solid var(--oro);padding:clamp(22px,3vw,40px);display:flex;flex-direction:column;gap:14px}
 .ref-green{background:var(--verde);color:var(--crema);outline:1px solid var(--oro);outline-offset:-10px;border-color:transparent}
 .ref-t{font-size:clamp(24px,3.4vw,30px);font-weight:500;line-height:1.15;color:var(--verde)}
 .ref-green .ref-t{color:var(--crema)}
 .ref p:last-child{font-size:clamp(16.5px,2vw,18px);line-height:1.55}
+.mark{display:flex;gap:8px;align-items:center}
+.mark i{width:12px;height:12px;background:var(--oro);transform:rotate(45deg)}
 .pips{display:flex;gap:8px}
 .pips i{width:12px;height:12px;border:1px solid var(--oro);transform:rotate(45deg);box-sizing:border-box}
 .pips i.on{background:var(--verde);border-color:var(--verde)}
