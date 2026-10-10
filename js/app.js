@@ -345,7 +345,7 @@
   /* ====================== ACCIONES ====================== */
 
   function scrollToSummary() {
-    if (window.matchMedia('(min-width:1024px)').matches) {
+    if (window.matchMedia('(min-width:1100px)').matches) {
       var el = $('#sum-desktop');
       window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
     } else {
@@ -476,7 +476,7 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !sheet.hidden) closeSheet(); });
 
   var quoteSec = $('#cotizacion');
-  var isWide = function () { return window.matchMedia('(min-width:1024px)').matches; };
+  var isWide = function () { return window.matchMedia('(min-width:1100px)').matches; };
 
   function syncBar() {
     if (isWide()) { qbar.hidden = true; qbar.classList.remove('is-on'); return; }
